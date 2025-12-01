@@ -13,6 +13,38 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+QMenuBar {
+    background-color: #3c3c3c;
+    color: #ffffff;
+}
+QMenuBar::item {
+    background-color: #3c3c3c;
+    color: #ffffff;
+}
+QMenuBar::item:selected {
+    background-color: #505050;
+}
+QMenu {
+    background-color: #3c3c3c;
+    color: #ffffff;
+}
+QMenu::item:selected {
+    background-color: #505050;
+}
+QToolBar {
+    background-color: #3c3c3c;
+    border: none;
+}
+QStatusBar {
+    background-color: #3c3c3c;
+    color: #ffffff;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -46,8 +78,16 @@
     <addaction name="actionAll"/>
     <addaction name="actionPaste"/>
    </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>檢視(&amp;V)</string>
+    </property>
+    <addaction name="actionStayOnTop"/>
+    <addaction name="actionFullScreen"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="filetoolBar">
@@ -157,6 +197,16 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionStayOnTop">
+   <property name="text">
+    <string>保持在最上層</string>
+   </property>
+  </action>
+  <action name="actionFullScreen">
+   <property name="text">
+    <string>全螢幕</string>
    </property>
   </action>
  </widget>
